@@ -1,1 +1,41 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div>User Profile</div>
+        <div>Group Kernals: <span id="groupKernalsEl" class="groupKernalsEl">0</span></div>
+        <div>Current Contribution: <span id="personalContributionOfKernalsEl" class="personalContributionOfKernalsEl">0</span> Kernals</div>
+    </nav>
+    <div class="gameBody">
+        <div class="clickerSide">
+            <h2>Kron's Head</h2>
+            <button class="kornsHead" id="kornsHead"></button>
+        </div>
+        <div class="groupSide">
+            <h2>Online</h2>
+            <div class="onlineUser" id="onlineUser"><span id="userNameDisplay">Username</span> <p><span id="onlineContributionDisplay">XXX</span> Kernals</p></div>
+        </div>
+        <div class="marketSide">
+            <h2>Market</h2>
+            <div class="marketOptionHolder" id="marketOptionHolder">
+                <div class="marketOption" id="marketOption">
+                    <div class="topLayerForOption">
+                        <img src="" alt="marketOptionIcon" id="marketOptionIcon" class="marketOptionIcon">
+                        <p id="marketOptionNameEl" class="marketOptionNameEl">Market Option Name</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostEl"></span> Kernals</p>
+                    </div>
+                    <div class="bottomLayerForOption">
+                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
+                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

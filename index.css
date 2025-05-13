@@ -1,1 +1,101 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    color: white;
+    font-weight: bold;
+}
+.gameBody{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.clickerSide{
+    width: 30%;
+    text-align: center;
+}
+.groupSide{
+    width: 30%;
+    text-align: center;
+}
+.marketSide{
+    width: 30%;
+    text-align: center;
+}
+.kornsHead{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+}
+.kornsHead:hover{
+    background-color: #444;
+}
+.onlineUser{
+    background-color: #333;
+    padding: 16px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.userNameDisplay{
 
+}
+.marketOption{
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+.marketOptionIcon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #444;
+}
+.marketOptionNameEl{
+    font-size: 20px;
+    margin: 10px 0px;
+}
+.marketOptionCostHolderEl{
+    font-size: 15px;
+    margin: 10px 0px;
+}
+.buyMarketOptionBTN{
+    background-color: #444;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+.buyMarketOptionBTN:hover{
+    background-color: #555;
+}
+.sellMarketOptionBTN{
+    background-color: #444;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+.sellMarketOptionBTN:hover{
+    background-color: #555;
+}
+.topLayerForOption{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottomLayerForOption{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
