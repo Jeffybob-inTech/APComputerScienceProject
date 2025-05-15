@@ -27,12 +27,22 @@ body{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #333;
+    background-image: url("/KornsHead.jpg");
+    background-size: cover;
     border: none;
     cursor: pointer;
+    background-position-y: 0%;
+    transition: 0.2s;
 }
 .kornsHead:hover{
-    background-color: #444;
+    height: 116px;
+    width: 116px;
+    transition: 0.2s;
+}
+.kornsHead:active{
+    height: 108px;
+    width: 108px;
+    transition: 0.2s;
 }
 .onlineUser{
     background-color: #333;
@@ -98,4 +108,97 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 20px;
+    flex-direction: row;
+    padding: 16px;
+}
+nav img{
+    border-radius: 100px;
+    
+}
+nav div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav div span{
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 16px;
+}
+/*Character Selection*/
+.characterSelectionCn{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    background-color: #242424;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.characterSelectionCn img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+.characterSelectionButton{
+    padding: 16px;
+    background-color: #000000;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    width: 20%;
+    min-width: 250px;
+    max-width: 400px;
+    transition: all 0.2s ease-in-out;
+}
+.topLayerForCharacterSelection{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+}
+.bottomLayerForCharacterSelection{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.bottomLayerForCharacterSelection li{
+    text-decoration: none;
+    list-style: none;
+    margin: 0px 10px;
+    text-align: left;
+}
+.bottomLayerForCharacterSelection h4{
+    margin: 10px 10px 6px 10px;
+}
+.characterSelectionButton:hover{
+    padding: 22px;
+    background-color: #121212;
+}
+.characterSelectionButton:active{
+    padding: 28px;
+    background-color: #000000;
+    transition: transfrom 0.2s ease-in-out;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transform: rotate(360deg);
 }
