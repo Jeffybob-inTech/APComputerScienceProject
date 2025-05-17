@@ -293,7 +293,7 @@ kornsHeadBtn.addEventListener("click", function(){
     groupKernalsEl.textContent = thisRunsContribution;
 })
 
-marketOption.addEventListener("click", function(){
+/*marketOption.addEventListener("click", function(){
     if(thisRunsContribution < price){
         return;
     }
@@ -305,7 +305,7 @@ marketOption.addEventListener("click", function(){
     marketOptionCostEl.textContent = price;
     personalContributionOfKernalsEl.textContent = thisRunsContribution;
     groupKernalsEl.textContent = thisRunsContribution;
-})
+})*/
 //market options
 /*
  popkorn
@@ -323,4 +323,5 @@ marketOption.addEventListener("click", function(){
  popkorn galaxy
  popkorn simulation
  hacked popkorn
+ no life popkorn
  */
