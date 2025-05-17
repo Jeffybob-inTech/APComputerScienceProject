@@ -5,6 +5,23 @@ const groupKernalsEl = document.getElementById("groupKernalsEl");
 const marketOption = document.getElementById("marketOption");
 const characterSelectionButton  = document.getElementById("Icon");
 const marketOptionCostEl = document.getElementById("marketOptionCostEl")
+//character selection ids
+const patrickCharacterSelection = document.getElementById("patrickCharacterSelection");
+const dennisCharacterSelection = document.getElementById("dennisCharacterSelection");
+const zackCharacterSelection = document.getElementById("zackCharacterSelection");
+const quentinCharacterSelection = document.getElementById("quentinCharacterSelection");
+const brianCharacterSelection = document.getElementById("brianCharacterSelection");
+const loganCharacterSelection = document.getElementById("loganCharacterSelection");
+const avaCharacterSelection = document.getElementById("avaCharacterSelection");
+const davidCharacterSelection = document.getElementById("davidCharacterSelection");
+const kellenCharacterSelection = document.getElementById("kellenCharacterSelection");
+const benCharacterSelection = document.getElementById("benCharacterSelection");
+const declanCharacterSelection = document.getElementById("declanCharacterSelection");
+const kornCharacterSelection = document.getElementById("kornCharacterSelection");
+const chandlerCharacterSelection = document.getElementById("chandlerCharacterSelection");
+
+
+
 //character selection
 characterSelectionButton.addEventListener("click", function(){
     characterSelectionCn.style.display = "none";
@@ -38,7 +55,16 @@ marketOption.addEventListener("click", function(){
  popkorn
  small fire
  popkorn popper
+ popkorn stand
+ popkorn truck
  movie theater
+ golf course
+ bear's stadium
  popkorn factory
  popkorn empire
+ popkorn monopoly
+ popkorn world
+ popkorn galaxy
+ popkorn simulation
+ hacked popkorn
  */
