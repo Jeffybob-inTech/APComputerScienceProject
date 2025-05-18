@@ -292,254 +292,211 @@
         </div>
         <div class="groupSide">
             <h2>Online</h2>
-            <div class="onlineUser" id="onlineUser"><span id="userNameDisplay">Username</span> <p><span id="onlineContributionDisplay">XXX</span> Kernals</p></div>
+            <div class="onlineUser" id="onlineUser"> <div class="userIdeifierOnline"><img src="/patrickIcon.jpeg" alt="" class="iconImage"><span class="userNameDisplay" id="userNameDisplay">Username</span></div><p><span id="onlineContributionDisplay">XXX</span> Kernals</p></div>
         </div>
         <div class="marketSide">
             <h2>Market</h2><!--change color of button when selling-->
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            <div class="marketStats">
+                <p class="kernalsPerSecondEl">Passive Kernals Per Second: <span id="kernalsPerSecondEl">0</span></p>
+                <p class="kernalsPerClickEl">Kernals Per Click: <span id="kernalsPerClickEL">1</span></p>
+            </div>
+            
                 <div class="marketOption" id="popcornMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/popcorn.jpg" alt="popcorn" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Popkorn</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">10<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElPopkorn">100</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
+                    <div class="bottomLayerForOption">  
+                        <p>Number of popkorn <span id="numberOfPopkornEl"></span></p>
+                        <p>Help from popkorn <span id="helpFromPopkornEl"></span></p>
                     </div>
                 </div>
-            </div>
+            
         
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="smallFireMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/campfire.jpg" alt="small fire" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Small Fire</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">100<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElSmallFire">1000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
         
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="popcornPopperMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/popcornPopper.jpg" alt="popcornPopper" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Popkorn Popper</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">1000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElPopkornPopper">10000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
         
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="popcornStandMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/popcornStand.jpg" alt="popcorn stand" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Popkorn Stand</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">10000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElPopkornStand">100000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
         
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="popcornTruckMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/popcornTruck.jpg" alt="popcorn truck" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Popkorn Truck</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">100000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElPopkornTruck">1000000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
         
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="movieTheaterMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/movieTheater.jpg" alt="movie theater" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Movie Theater</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">1000000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElMovieTheater">10000000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
         
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="golfCourseMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/golfCourse.jpg" alt="golf course" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Golf Course</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">10000000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElGolfCourse">100000000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
         
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="bearsStadiumMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/bearsStadium.jpg" alt="bearsStadium" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Bear's Stadium</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">100000000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElBearsStadium">10000000000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
         
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="popcornFactoryMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/popcornFactory.jpg" alt="popcornFactory" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Popkorn Factory</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">100000000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElPopkornFactory">10000000000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
 
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="popcornEmpireMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/popcornEmpire.jpg" alt="popcornEmpire" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Popkorn Empire</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">100000000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElPopkornEmpire">10000000000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
 
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="popcornMonopolyMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/popcornMonopoly.jpg" alt="popcornMonopoly" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Popkorn Monopoly</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">100000000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElPopkornMonopoly">10000000000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
 
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="popcornWorldMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/popcornWorld.jpg" alt="popcornWorld" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Popkorn World</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">100000000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElPopkornWorld">10000000000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
 
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="popcornGalaxyMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/popcornGalaxy.jpg" alt="popcornGalaxy" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Popkorn Galaxy</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">100000000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElPopkornGalaxy">10000000000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
 
-            <div class="marketOptionHolder" id="marketOptionHolder">
-                <div class="marketOption" id="simulationPopcornMarketOption">
+            
+                <div class="marketOption" id="popcornSimulationMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/simulationPopcorn.jpg" alt="simulationPopcorn" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Popkorn Simulation</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">100000000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElPopkornSimulation">10000000000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
 
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="hackedPopcornMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/hackedPopcorn.jpg" alt="hackedPopcorn" class="marketOptionIcon">
                         <p class="marketOptionNameEl">Hacked Popkorn</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">100000000<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElHackedPopkorn">10000000000</span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
 
 
 
-            <div class="marketOptionHolder" id="marketOptionHolder">
-                <div class="marketOption" id="noLifeMarketOption">
+            
+                <div class="marketOption" id="noLifePopcornMarketOption">
                     <div class="topLayerForOption">
                         <img src="/picturesForGame/congrats.jpg" alt="noLife" class="marketOptionIcon">
                         <p class="marketOptionNameEl">No Life</p>
-                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl">Infinit<span id="marketOptionCostEl"></span> Kernals</p>
+                        <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostHolderElNoLifePopkorn">Infinit</span> Kernals</p>
                     </div>
                     <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                            <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                        </div>
-                    </div>
-                </div>
+                        <p>Congratulations! You have no life!</p>
+                        <p>Click the button to presitge</p>
+
             </div>
         </div>
     </div>
         <!--
         <div class="upgradeSide">
             <h2>Upgrades</h2>
-            <div class="marketOptionHolder" id="marketOptionHolder">
+            
                 <div class="marketOption" id="marketOption">
                     <div class="topLayerForOption">
                         <img src="" alt="marketOptionIcon" id="marketOptionIcon" class="marketOptionIcon">
                         <p id="marketOptionNameEl" class="marketOptionNameEl">Market Option Name</p>
                         <p id="marketOptionCostHolderEl" class="marketOptionCostHolderEl"><span id="marketOptionCostEl"></span> Kernals</p>
                     </div>
-                    <div class="bottomLayerForOption">
-                        <button id="buyMarketOptionBTN" class="buyMarketOptionBTN">Buy</button>
-                        <button id="sellMarketOptionBTN" class="sellMarketOptionBTN">Sell</button>
-                    </div>
+                    
                 </div>
-            </div>
+            
         </div>-->
     
 

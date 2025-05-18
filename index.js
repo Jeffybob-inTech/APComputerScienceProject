@@ -8,6 +8,44 @@ const groupKernalsEl = document.getElementById("groupKernalsEl");
 const marketOption = document.getElementById("marketOption");
 const characterSelectionButton  = document.getElementById("Icon");
 const marketOptionCostEl = document.getElementById("marketOptionCostEl")
+//market option ids
+const marketOptionCostHolderElPopkorn = document.getElementById("marketOptionCostHolderElPopkorn");
+const marketOptionCostHolderElSmallFire = document.getElementById("marketOptionCostHolderElSmallFire");
+const marketOptionCostHolderElPopkornPopper = document.getElementById("marketOptionCostHolderElPopkornPopper");
+const marketOptionCostHolderElPopkornStand = document.getElementById("marketOptionCostHolderElPopkornStand");
+const marketOptionCostHolderElPopkornTruck = document.getElementById("marketOptionCostHolderElPopkornTruck");
+const marketOptionCostHolderElMovieTheater = document.getElementById("marketOptionCostHolderElMovieTheater");
+const marketOptionCostHolderElGolfCourse = document.getElementById("marketOptionCostHolderElGolfCourse");
+const marketOptionCostHolderElBearsStadium = document.getElementById("marketOptionCostHolderElBearsStadium");
+const marketOptionCostHolderElPopkornFactory = document.getElementById("marketOptionCostHolderElPopkornFactory");
+const marketOptionCostHolderElPopkornEmpire = document.getElementById("marketOptionCostHolderElPopkornEmpire");
+const marketOptionCostHolderElPopkornMonopoly = document.getElementById("marketOptionCostHolderElPopkornMonopoly");
+const marketOptionCostHolderElPopkornWorld = document.getElementById("marketOptionCostHolderElPopkornWorld");
+const marketOptionCostHolderElPopkornGalaxy = document.getElementById("marketOptionCostHolderElPopkornGalaxy");
+const marketOptionCostHolderElPopkornSimulation = document.getElementById("marketOptionCostHolderElPopkornSimulation");
+const marketOptionCostHolderElHackedPopkorn = document.getElementById("marketOptionCostHolderElHackedPopkorn");
+const marketOptionCostHolderElNoLifePopkorn = document.getElementById("marketOptionCostHolderElNoLifePopkorn");
+
+const popcornMarketOption = document.getElementById("popcornMarketOption");
+const smallFireMarketOption = document.getElementById("smallFireMarketOption");
+const popcornPopperMarketOption = document.getElementById("popcornPopperMarketOption");
+const popcornStandMarketOption = document.getElementById("popcornStandMarketOption");
+const popcornTruckMarketOption = document.getElementById("popcornTruckMarketOption");
+const movieTheaterMarketOption = document.getElementById("movieTheaterMarketOption");
+const golfCourseMarketOption = document.getElementById("golfCourseMarketOption");
+const bearsStadiumMarketOption = document.getElementById("bearsStadiumMarketOption");
+const popcornFactoryMarketOption = document.getElementById("popcornFactoryMarketOption");
+const popcornEmpireMarketOption = document.getElementById("popcornEmpireMarketOption");
+const popcornMonopolyMarketOption = document.getElementById("popcornMonopolyMarketOption");
+const popcornWorldMarketOption = document.getElementById("popcornWorldMarketOption");
+const popcornGalaxyMarketOption = document.getElementById("popcornGalaxyMarketOption");
+const popcornSimulationMarketOption = document.getElementById("popcornSimulationMarketOption");
+const hackedPopcornMarketOption = document.getElementById("hackedPopcornMarketOption");
+const noLifePopcornMarketOption = document.getElementById("noLifePopcornMarketOption");
+
+const kernalsPerClickEL = document.getElementById("kernalsPerClickEL");
+const kernalsPerSecondEl = document.getElementById("kernalsPerSecondEl");
+
 //character selection ids
 const characterSelectionCn = document.getElementById("characterSelectionCn");
 const partickCharacterSelection = document.getElementById("partickCharacterSelection");
@@ -285,43 +323,296 @@ adminPasswordSubmit.addEventListener("click", function(){
 //playing the game
 let thisRunsContribution = 0;
 let multiplier = 1;
-let price = 10;
-let numberBought = 0;
+let kernalsPerSecond = 0;
+let kernalsPerClick = 1;
 kornsHeadBtn.addEventListener("click", function(){
-    thisRunsContribution += multiplier;
-    personalContributionOfKernalsEl.textContent = thisRunsContribution;
-    groupKernalsEl.textContent = thisRunsContribution;
+    thisRunsContribution += 1*multiplier;
+    personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+    groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+})
+//market option
+let numberOfPopkornBought = 0;
+let numberOfSmallFireBought = 0;
+let numberOfPopkornPopperBought = 0;
+let numberOfPopkornStandBought = 0;
+let numberOfPopkornTruckBought = 0;
+let numberOfMovieTheaterBought = 0;
+let numberOfGolfCourseBought = 0;
+let numberOfBearsStadiumBought = 0;
+let numberOfPopkornFactoryBought = 0;
+let numberOfPopkornEmpireBought = 0;
+let numberOfPopkornMonopolyBought = 0;
+let numberOfPopkornWorldBought = 0;
+let numberOfPopkornGalaxyBought = 0;
+let numberOfPopkornSimulationBought = 0;
+let numberOfHackedPopkornBought = 0;
+let numberOfNoLifePopkornBought = 0;
+
+let priceOfPopkorn = 100;
+let priceOfSmallFire = 100;
+let priceOfPopkornPopper = 10000;
+let priceOfPopkornStand = 100000;
+let priceOfPopkornTruck = 1000000;
+let priceOfMovieTheater = 10000000;
+let priceOfGolfCourse = 100000000;
+let priceOfBearsStadium = 1000000000;
+let priceOfPopkornFactory = 10000000000;
+let priceOfPopkornEmpire = 100000000000;
+let priceOfPopkornMonopoly = 1000000000000;
+let priceOfPopkornWorld = 10000000000000;
+let priceOfPopkornGalaxy = 100000000000000;
+let priceOfPopkornSimulation = 1000000000000000;
+let priceOfHackedPopkorn = 10000000000000000;
+let priceOfNoLifePopkorn = "Infinit";
+
+
+
+function updatePricesDisplayForMarketOptions(){
+    marketOptionCostHolderElPopkorn.textContent = numberWithCommas(priceOfPopkorn);
+    marketOptionCostHolderElSmallFire.textContent = numberWithCommas(priceOfSmallFire);
+    marketOptionCostHolderElPopkornPopper.textContent = numberWithCommas(priceOfPopkornPopper);
+    marketOptionCostHolderElPopkornStand.textContent = numberWithCommas(priceOfPopkornStand);
+    marketOptionCostHolderElPopkornTruck.textContent = numberWithCommas(priceOfPopkornTruck);
+    marketOptionCostHolderElMovieTheater.textContent = numberWithCommas(priceOfMovieTheater);
+    marketOptionCostHolderElGolfCourse.textContent = numberWithCommas(priceOfGolfCourse);
+    marketOptionCostHolderElBearsStadium.textContent = numberWithCommas(priceOfBearsStadium);
+    marketOptionCostHolderElPopkornFactory.textContent = numberWithCommas(priceOfPopkornFactory);
+    marketOptionCostHolderElPopkornEmpire.textContent = numberWithCommas(priceOfPopkornEmpire);
+    marketOptionCostHolderElPopkornMonopoly.textContent = numberWithCommas(priceOfPopkornMonopoly);
+    marketOptionCostHolderElPopkornWorld.textContent = numberWithCommas(priceOfPopkornWorld);
+    marketOptionCostHolderElPopkornGalaxy.textContent = numberWithCommas(priceOfPopkornGalaxy);
+    marketOptionCostHolderElPopkornSimulation.textContent = numberWithCommas(priceOfPopkornSimulation);
+    marketOptionCostHolderElHackedPopkorn.textContent = numberWithCommas(priceOfHackedPopkorn);
+    marketOptionCostHolderElNoLifePopkorn.textContent = priceOfNoLifePopkorn;
+    kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+}
+updatePricesDisplayForMarketOptions();
+
+
+popcornMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfPopkorn){
+        thisRunsContribution -= priceOfPopkorn;
+        numberOfPopkornBought += 1;
+        multiplier += 1;
+        kernalsPerClick += 1;
+        priceOfPopkorn *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(kernalsPerClick);
+        priceOfPopkorn = Math.floor(priceOfPopkorn);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElPopkorn.textContent = numberWithCommas(priceOfPopkorn);
+    }
+})
+smallFireMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfSmallFire){
+        thisRunsContribution -= priceOfSmallFire;
+        kernalsPerSecond++;
+        numberOfSmallFireBought += 1;
+        priceOfSmallFire *= 1.2;
+        kernalsPerSecondEl.textContent = numberWithCommas(kernalsPerSecond);
+        priceOfSmallFire = Math.floor(priceOfSmallFire);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(Math.floor(thisRunsContribution));
+        groupKernalsEl.textContent = numberWithCommas(Math.floor(thisRunsContribution));
+        marketOptionCostHolderElSmallFire.textContent = numberWithCommas(priceOfSmallFire);
+    }
+})
+popcornPopperMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfPopkornPopper){
+        thisRunsContribution -= priceOfPopkornPopper;
+        numberOfPopkornPopperBought += 1;
+        multiplier += 10;
+        priceOfPopkornPopper *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfPopkornPopper = Math.floor(priceOfPopkornPopper);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElPopkornPopper.textContent = numberWithCommas(priceOfPopkornPopper);
+    }
+})
+popcornStandMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfPopkornStand){
+        thisRunsContribution -= priceOfPopkornStand;
+        numberOfPopkornStandBought += 1;
+        multiplier += 25;
+        priceOfPopkornStand *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfPopkornStand = Math.floor(priceOfPopkornStand);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElPopkornStand.textContent = numberWithCommas(priceOfPopkornStand);
+    }
+})
+popcornTruckMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfPopkornTruck){
+        thisRunsContribution -= priceOfPopkornTruck;
+        numberOfPopkornTruckBought += 1;
+        multiplier += 50;
+        priceOfPopkornTruck *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfPopkornTruck = Math.floor(priceOfPopkornTruck);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElPopkornTruck.textContent = numberWithCommas(priceOfPopkornTruck);
+    }
+})
+movieTheaterMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfMovieTheater){
+        thisRunsContribution -= priceOfMovieTheater;
+        numberOfMovieTheaterBought += 1;
+        multiplier += 100;
+        priceOfMovieTheater *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfMovieTheater = Math.floor(priceOfMovieTheater);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElMovieTheater.textContent = numberWithCommas(priceOfMovieTheater);
+    }
+})
+golfCourseMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfGolfCourse){
+        thisRunsContribution -= priceOfGolfCourse;
+        numberOfGolfCourseBought += 1;
+        multiplier += 200;
+        priceOfGolfCourse *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfGolfCourse = Math.floor(priceOfGolfCourse);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElGolfCourse.textContent = numberWithCommas(priceOfGolfCourse);
+    }
+})
+bearsStadiumMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfBearsStadium){
+        thisRunsContribution -= priceOfBearsStadium;
+        numberOfBearsStadiumBought += 1;
+        multiplier += 500;
+        priceOfBearsStadium *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfBearsStadium = Math.floor(priceOfBearsStadium);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElBearsStadium.textContent = numberWithCommas(priceOfBearsStadium);
+    }
+})
+popcornFactoryMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfPopkornFactory){
+        thisRunsContribution -= priceOfPopkornFactory;
+        numberOfPopkornFactoryBought += 1;
+        multiplier += 1000;
+        priceOfPopkornFactory *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfPopkornFactory = Math.floor(priceOfPopkornFactory);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElPopkornFactory.textContent = numberWithCommas(priceOfPopkornFactory);
+    }
+})
+popcornEmpireMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfPopkornEmpire){
+        thisRunsContribution -= priceOfPopkornEmpire;
+        numberOfPopkornEmpireBought += 1;
+        multiplier += 5000;
+        priceOfPopkornEmpire *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfPopkornEmpire = Math.floor(priceOfPopkornEmpire);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElPopkornEmpire.textContent = numberWithCommas(priceOfPopkornEmpire);
+    }
+})
+popcornMonopolyMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfPopkornMonopoly){
+        thisRunsContribution -= priceOfPopkornMonopoly;
+        numberOfPopkornMonopolyBought += 1;
+        multiplier += 10000;
+        priceOfPopkornMonopoly *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfPopkornMonopoly = Math.floor(priceOfPopkornMonopoly);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElPopkornMonopoly.textContent = numberWithCommas(priceOfPopkornMonopoly);
+    }
+})
+popcornWorldMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfPopkornWorld){
+        thisRunsContribution -= priceOfPopkornWorld;
+        numberOfPopkornWorldBought += 1;
+        multiplier += 50000;
+        priceOfPopkornWorld *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfPopkornWorld = Math.floor(priceOfPopkornWorld);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElPopkornWorld.textContent = numberWithCommas(priceOfPopkornWorld);
+    }
+})
+popcornGalaxyMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfPopkornGalaxy){
+        thisRunsContribution -= priceOfPopkornGalaxy;
+        numberOfPopkornGalaxyBought += 1;
+        multiplier += 100000;
+        priceOfPopkornGalaxy *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfPopkornGalaxy = Math.floor(priceOfPopkornGalaxy);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElPopkornGalaxy.textContent = numberWithCommas(priceOfPopkornGalaxy);
+    }
+})
+popcornSimulationMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfPopkornSimulation){
+        thisRunsContribution -= priceOfPopkornSimulation;
+        numberOfPopkornSimulationBought += 1;
+        multiplier += 1000000;
+        priceOfPopkornSimulation *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfPopkornSimulation = Math.floor(priceOfPopkornSimulation);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElPopkornSimulation.textContent = numberWithCommas(priceOfPopkornSimulation);
+    }
+})
+hackedPopcornMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfHackedPopkorn){
+        thisRunsContribution -= priceOfHackedPopkorn;
+        numberOfHackedPopkornBought += 1;
+        multiplier += 10000000;
+        priceOfHackedPopkorn *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfHackedPopkorn = Math.floor(priceOfHackedPopkorn);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElHackedPopkorn.textContent = numberWithCommas(priceOfHackedPopkorn);
+    }
+})
+noLifePopcornMarketOption.addEventListener("click", function(){
+    if(thisRunsContribution >= priceOfNoLifePopkorn){
+        thisRunsContribution -= priceOfNoLifePopkorn;
+        numberOfNoLifePopkornBought += 1;
+        multiplier += 100000000;
+        priceOfNoLifePopkorn *= 1.2;
+        kernalsPerClickEL.textContent = numberWithCommas(multiplier);
+        priceOfNoLifePopkorn = Math.floor(priceOfNoLifePopkorn);
+        personalContributionOfKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        groupKernalsEl.textContent = numberWithCommas(thisRunsContribution);
+        marketOptionCostHolderElNoLifePopkorn.textContent = numberWithCommas(priceOfNoLifePopkorn);
+    }
 })
 
-/*marketOption.addEventListener("click", function(){
-    if(thisRunsContribution < price){
-        return;
+//create a function that changes numbers to strings with words ie: 1,000,000 = 1 million
+function numberWithCommas(x) {
+    if(x === "Infinit"){
+        return x;
     }
-    multiplier += 1;
-    
-    thisRunsContribution -= price;
-    price *= 1.8 + numberBought;
-    numberBought++;
-    marketOptionCostEl.textContent = price;
-    personalContributionOfKernalsEl.textContent = thisRunsContribution;
-    groupKernalsEl.textContent = thisRunsContribution;
-})*/
-//market options
-/*
- popkorn
- small fire
- popkorn popper
- popkorn stand
- popkorn truck
- movie theater
- golf course
- bear's stadium
- popkorn factory
- popkorn empire
- popkorn monopoly
- popkorn world
- popkorn galaxy
- popkorn simulation
- hacked popkorn
- no life popkorn
- */
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+setTimeout(function(){
+    setInterval(function(){
+        thisRunsContribution += numberOfSmallFireBought*.2;
+        personalContributionOfKernalsEl.textContent = numberWithCommas(Math.floor(thisRunsContribution));
+        groupKernalsEl.textContent = numberWithCommas(Math.floor(thisRunsContribution));
+    }, 200)
+}
+)
+
+
